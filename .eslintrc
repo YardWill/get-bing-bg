@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb/base",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "strict": [2, "global"],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "globals": {
+    "$": true,
+    "window": true,
+    "document": true,
+    "__dirname": true
+  },
+  "rules": {
+    "indent": [2, 4],
+    "no-new-func": 1,
+    "no-new": 0,
+    "generator-star-spacing": [0, {"before": false, "after": false}]
+  }
+}

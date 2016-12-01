@@ -1,0 +1,4 @@
+node_modules
+.vscode/
+*.Ds_Store
+npm-debug.log

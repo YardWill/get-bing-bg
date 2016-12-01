@@ -1,0 +1,15 @@
+{
+  "name": "get-bing-bg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Yard",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
+}
