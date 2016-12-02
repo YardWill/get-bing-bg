@@ -1,11 +1,20 @@
 const request = require('request');
 const fs = require('fs');
 const path = require('path');
+const schedule = require('node-schedule');
 
-request.get('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', (error, response, body) => {
-    const img = JSON.parse(body).images[0];
-    const arr = img.url.split('/');
-    const str = arr[arr.length - 1];
-    request(img.url).pipe(fs.createWriteStream(path.join('../../../Documents/bg', str)));
-    // '../../../Documents/bg'可以选择自己想要保存的目录（相对路径）
+const rule = new schedule.RecurrenceRule();
+rule.dayOfWeek = [0, new schedule.Range(1, 6)];
+rule.hour = 8;
+rule.minute = 0;
+
+schedule.scheduleJob(rule, () => {
+    request.get('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', (error, response, body) => {
+        const img = JSON.parse(body).images[0];
+        const arr = img.url.split('/');
+        const str = arr[arr.length - 1];
+        request(img.url).pipe(fs.createWriteStream(path.join('../../../Documents/bg', str)));
+        // '../../../Documents/bg'可以选择自己想要保存的目录（相对路径）
+        console.log(`${new Date()}${str} is ok!`);
+    });
 });
