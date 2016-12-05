@@ -23,8 +23,10 @@ const exec = (c) => {
 };
 console.log('Deploy start.');
 exec(cmd('cd ../myapp/public/img'))
+.then(() => exec(cmd('git status')))
+    .then((out) => console.log(out, '1'))
     .then(() => exec(cmd('git add .')))
-    .then((out) => console.log(out, '\nCompile success.\nStart copy resource.'))
+    .then((out) => console.log(out, '2'))
     .then(() => exec(cmd('git commit -m "ss"')))
     .then(() => exec(cmd('git push -u origin master')))
     .then(() => console.log('Deploy end.'))
