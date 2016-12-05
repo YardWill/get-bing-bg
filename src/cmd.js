@@ -24,7 +24,7 @@ const exec = (c) => {
 console.log('Deploy start.');
 exec(cmd('cd ../myapp/public/img'))
     .then(() => exec(cmd('git add .')))
-    .then(() => exec(cmd(`git commit -m '${new Date()}' `)))
+    .then(() => exec(cmd(`git commit -m ${new Date().getTime()} `)))
     .then(() => exec(cmd('git push -u origin master')))
     .then(() => console.log('Deploy end.'))
     .catch(err => {
