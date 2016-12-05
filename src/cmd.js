@@ -10,9 +10,9 @@ const config = {
     shell,
 };
 
-const exec = (cmdd) => {
+const exec = (c) => {
     return new Promise((resolve, reject) => {
-        childProcess.exec(cmdd, config, (err, stdout, stderr) => {
+        childProcess.exec(c, config, (err, stdout, stderr) => {
             if (err) {
                 reject(err);
             } else {
