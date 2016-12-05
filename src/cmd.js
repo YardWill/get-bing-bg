@@ -22,8 +22,8 @@ const exec = (c) => {
     });
 };
 console.log('Deploy start.');
-exec(cmd('cd ../myapp/public/img'))
-.then(() => exec(cmd('git status')))
+exec(cmd('cd ../myapp/public/img && git status'))
+// .then(() => exec(cmd('git status')))
     .then((out) => console.log(out, '1'))
     .then(() => exec(cmd('git add .')))
     .then((out) => console.log(out, '2'))
