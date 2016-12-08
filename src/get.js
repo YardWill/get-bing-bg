@@ -8,6 +8,6 @@ request.get('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-C
     const str = arr[arr.length - 1];
     request(img.url).pipe(fs.createWriteStream(path.join('../../../Documents/bg', str)));
     // '../../../Documents/bg'可以选择自己想要保存的目录（相对路径）
-    // require('./src/cmd.js');
+    require('./cmd.js');
     console.log(`${new Date()}${str} is ok!`);
 });
