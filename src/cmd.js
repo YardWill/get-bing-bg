@@ -21,15 +21,12 @@ const exec = (c) => {
         });
     });
 };
-const cdexec = (c) => {
-    return exec(cmd(`cd ../myapp/public/img && ${c}`));
-};
 
 console.log('Deploy start.');
-cdexec(cmd('git status'))
-    .then(() => cdexec(cmd('git add .')))
-    .then(() => cdexec(cmd('git commit -m "ss"')))
-    .then(() => cdexec(cmd('git push -u origin master')))
+exec(cmd('git status'))
+    .then(() => exec(cmd('git add .')))
+    .then(() => exec(cmd('git commit -m "ss"')))
+    .then(() => exec(cmd('git push -u origin master')))
     .then(() => console.log('Deploy end.'))
     .catch(err => {
         console.error(err);
