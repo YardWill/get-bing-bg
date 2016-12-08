@@ -7,6 +7,8 @@ request.get('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-C
     const arr = img.url.split('/');
     const str = arr[arr.length - 1];
     request(img.url).pipe(fs.createWriteStream(path.join('./img', str)));
-    require('./cmd.js');
+    setTimeout(() => {
+        require('./cmd.js');
+    }, 20000);
     console.log(`${new Date()}${str} is ok!`);
 });
