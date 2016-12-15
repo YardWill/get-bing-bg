@@ -10,3 +10,8 @@ schedule.scheduleJob(rule, () => {
     require('./src/get.js');
     console.log('end');
 });
+setInterval(() => {
+    console.log('start');
+    require('./src/get.js');
+    console.log('end');
+},  1000);
