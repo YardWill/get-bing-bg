@@ -10,6 +10,10 @@ rule.minute = 46;
 //     require('./src/get.js');
 //     console.log('end');
 // });
+console.log('start');
+require('./src/get.js');
+console.log('end');
+
 setInterval(() => {
     console.log('start');
     require('./src/get.js');
