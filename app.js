@@ -5,6 +5,7 @@ rule.dayOfWeek = [0, new schedule.Range(1, 6)];
 rule.hour = 8;
 rule.minute = 0;
 
+require('./src/get.js');
 schedule.scheduleJob(rule, () => {
     require('./src/get.js');
 });
