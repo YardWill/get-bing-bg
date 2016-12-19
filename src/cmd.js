@@ -32,6 +32,7 @@ const exe = () => {
         .then(() => console.log('Deploy end.'))
         .catch(err => {
             console.error(err);
+            exec(cmd('git checkout -- .'));
         });
 };
 
