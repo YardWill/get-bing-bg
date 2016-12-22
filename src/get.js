@@ -11,7 +11,7 @@ const req = () => {
         request(`http://cn.bing.com${img.url}`)
             .pipe(fs.createWriteStream(path.join('./img', str))
                 .on('close', () => {
-                    console.log(`download ${new Date()}${str} is ok!`);
+                    console.log(`${new Date()}${str} is ok!`);
                     exe();
                 }));
     });
