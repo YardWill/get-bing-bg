@@ -10,6 +10,6 @@ rule.minute = 0;
 // for (let i = 1; i < 60; i += 10) { times.push(i); }
 // rule.second = times;
 
-schedule.scheduleJob(rule, () => {
+// schedule.scheduleJob(rule, () => {
     req();
-});
+// });
