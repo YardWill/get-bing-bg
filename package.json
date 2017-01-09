@@ -1,16 +1,25 @@
 {
   "name": "get-bing-bg",
   "version": "1.0.0",
-  "description": "",
+  "description": "保存bing的每日美图",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "author": "Yard",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "node-schedule": "^1.2.0",
     "request": "^2.79.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YardWill/get-bing-bg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YardWill/get-bing-bg/issues"
+  },
+  "homepage": "https://github.com/YardWill/get-bing-bg#readme"
 }
